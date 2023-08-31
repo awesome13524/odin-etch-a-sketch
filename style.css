@@ -4,6 +4,7 @@
     height: 700px;
     width: 700px;
     border: 1px solid black;
+    margin-top: 8px;
 }
 .row{
     display: flex;
