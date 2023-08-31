@@ -3,6 +3,15 @@ let row
 let box
 makeGrid(16);
 
+
+let elements = document.querySelectorAll('.box');
+
+elements.forEach((element) => {
+    element.addEventListener('mouseover', () => {
+        element.classList.add('hover');
+    });
+});
+
 function makeGrid(gridLength) {
     for(let i = 0; i < gridLength; i++){
         row = document.createElement('div');
