@@ -1,17 +1,12 @@
-container = document.querySelector('.container');
-btn = document.querySelector('button');
 let row;
 let box;
 let allRows;
 let allBoxes;
+let hoverCounter
+container = document.querySelector('.container');
+btn = document.querySelector('button');
 makeGrid(16);
 btn.addEventListener('click', buttonPress);
-allBoxes = document.querySelectorAll('.box');
-allBoxes.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-        element.classList.add('hover');
-    });
-});
 
 function makeGrid(gridLength) {
     allRows = document.querySelectorAll('.row');
@@ -31,8 +26,8 @@ function makeGrid(gridLength) {
     }
     allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((element) => {
-        element.addEventListener('mouseover', () => {
-            element.classList.add('hover');
+        element.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = randomColor();
         });
     });
 }
@@ -47,4 +42,11 @@ function buttonPress(){
         userInput = parseInt(userInput)
     }
     makeGrid(userInput);
+}
+
+function randomNumber(){
+    return Math.floor(Math.random() * 256);
+}
+function randomColor(){
+    return `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
 }
