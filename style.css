@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,8 +7,8 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    height: 700px;
-    width: 700px;
+    height: 960px;
+    width: 960px;
     border: 1px solid black;
     margin-top: 8px;
     background-color: white;
@@ -28,4 +28,9 @@ button{
     font-size: large;
     height: 50px;
     width: 200px;
+    margin-top: 4px;
+}
+h1{
+    font-size: 48px;
+    font-family: sans-serif;
 }
